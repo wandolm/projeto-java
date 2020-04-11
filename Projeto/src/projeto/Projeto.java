@@ -26,6 +26,20 @@ public class Projeto {
         Scanner ler = new Scanner(System.in);
         System.out.println("Seu nome: ");
         String n = ler.nextLine();
-        meuNome(n);        
-    }           
+        meuNome(n);               
+        
+        idade();
+    }
+    
+    public static void  idade(){
+        int idade=0;
+        
+        System.out.println("Informe sua idade");
+        	
+        Scanner in = new Scanner(System.in);
+        idade = in.nextInt();
+        
+        System.out.println("Sua idade é : "+ idade);
+        
+    }
 }
