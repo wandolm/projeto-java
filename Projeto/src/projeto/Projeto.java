@@ -5,6 +5,8 @@
  */
 package projeto;
 
+import java.util.Scanner;
+
 /**
  *
  * @author wando
@@ -17,8 +19,19 @@ public class Projeto {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        System.out.println("Hello World");
-        System.out.println("Hello Carla!");
+        idade();
+    }
+    
+    public static void  idade(){
+        int idade=0;
+        
+        System.out.println("Informe sua idade");
+        	
+        Scanner in = new Scanner(System.in);
+        idade = in.nextInt();
+        
+        System.out.println("Sua idade é : "+ idade);
+        
     }
     
 }
