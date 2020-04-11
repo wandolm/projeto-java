@@ -12,12 +12,21 @@ import java.util.Scanner;
  * @author wando
  */
 public class Projeto {
+    
+    static void meuNome(String n){
+        
+        System.out.println("Hello " + n + "!");                
+    }
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Scanner ler = new Scanner(System.in);
+        System.out.println("Seu nome: ");
+        String n = ler.nextLine();
+        meuNome(n);               
         
         idade();
     }
@@ -33,5 +42,4 @@ public class Projeto {
         System.out.println("Sua idade é : "+ idade);
         
     }
-    
 }
