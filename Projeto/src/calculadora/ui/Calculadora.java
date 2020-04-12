@@ -77,6 +77,11 @@ public class Calculadora extends javax.swing.JFrame {
         jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jBotao7.setText("7");
+        jBotao7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBotao7ActionPerformed(evt);
+            }
+        });
 
         jBotao4.setText("4");
 
@@ -220,6 +225,14 @@ public class Calculadora extends javax.swing.JFrame {
     private void jBotao6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotao6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jBotao6ActionPerformed
+
+    private void jBotao7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotao7ActionPerformed
+        // TODO add your handling code here:
+       if(jVisor.getText().equals("0")){
+           jVisor.setText("");
+       }
+        jVisor.setText(jVisor.getText()+"7");
+    }//GEN-LAST:event_jBotao7ActionPerformed
 
     /**
      * @param args the command line arguments
