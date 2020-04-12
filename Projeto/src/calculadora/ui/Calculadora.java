@@ -157,6 +157,11 @@ public class Calculadora extends javax.swing.JFrame {
         jBotaoIgual.setText("=");
 
         jBotaoC.setText("C");
+        jBotaoC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBotaoCActionPerformed(evt);
+            }
+        });
 
         jBotaoPonto.setText(",");
 
@@ -338,6 +343,11 @@ public class Calculadora extends javax.swing.JFrame {
        }
         jVisor.setText(jVisor.getText()+"9");
     }//GEN-LAST:event_jBotao9ActionPerformed
+
+    private void jBotaoCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotaoCActionPerformed
+        // TODO add your handling code here:
+        jVisor.setText("0");
+    }//GEN-LAST:event_jBotaoCActionPerformed
 
 
     /**
