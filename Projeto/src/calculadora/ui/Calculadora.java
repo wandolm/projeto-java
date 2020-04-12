@@ -86,14 +86,29 @@ public class Calculadora extends javax.swing.JFrame {
         jBotao4.setText("4");
 
         jBotao1.setText("1");
+        jBotao1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBotao1ActionPerformed(evt);
+            }
+        });
 
         jBotao8.setText("8");
 
         jBotao5.setText("5");
+        jBotao5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBotao5ActionPerformed(evt);
+            }
+        });
 
         jBotao2.setText("2");
 
         jBotao9.setText("9");
+        jBotao9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBotao9ActionPerformed(evt);
+            }
+        });
 
         jBotao6.setText("6");
         jBotao6.addActionListener(new java.awt.event.ActionListener() {
@@ -103,6 +118,11 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jBotao3.setText("3");
+        jBotao3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBotao3ActionPerformed(evt);
+            }
+        });
 
         jBotaoDividir.setText("/");
 
@@ -233,6 +253,38 @@ public class Calculadora extends javax.swing.JFrame {
        }
         jVisor.setText(jVisor.getText()+"7");
     }//GEN-LAST:event_jBotao7ActionPerformed
+
+    private void jBotao1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotao1ActionPerformed
+        // TODO add your handling code here:
+        if(jVisor.getText().equals("0")){
+           jVisor.setText("");
+       }
+        jVisor.setText(jVisor.getText()+"1");
+    }//GEN-LAST:event_jBotao1ActionPerformed
+
+    private void jBotao3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotao3ActionPerformed
+        // TODO add your handling code here:
+        if(jVisor.getText().equals("0")){
+           jVisor.setText("");
+       }
+        jVisor.setText(jVisor.getText()+"3");
+    }//GEN-LAST:event_jBotao3ActionPerformed
+
+    private void jBotao5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotao5ActionPerformed
+        // TODO add your handling code here:
+        if(jVisor.getText().equals("0")){
+           jVisor.setText("");
+       }
+        jVisor.setText(jVisor.getText()+"5");
+    }//GEN-LAST:event_jBotao5ActionPerformed
+
+    private void jBotao9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotao9ActionPerformed
+        // TODO add your handling code here:
+        if(jVisor.getText().equals("0")){
+           jVisor.setText("");
+       }
+        jVisor.setText(jVisor.getText()+"9");
+    }//GEN-LAST:event_jBotao9ActionPerformed
 
     /**
      * @param args the command line arguments
