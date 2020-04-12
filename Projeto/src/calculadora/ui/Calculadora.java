@@ -84,6 +84,11 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jBotao4.setText("4");
+        jBotao4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBotao4ActionPerformed(evt);
+            }
+        });
 
         jBotao1.setText("1");
         jBotao1.addActionListener(new java.awt.event.ActionListener() {
@@ -93,6 +98,11 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jBotao8.setText("8");
+        jBotao8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBotao8ActionPerformed(evt);
+            }
+        });
 
         jBotao5.setText("5");
         jBotao5.addActionListener(new java.awt.event.ActionListener() {
@@ -102,6 +112,11 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jBotao2.setText("2");
+        jBotao2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBotao2ActionPerformed(evt);
+            }
+        });
 
         jBotao9.setText("9");
         jBotao9.addActionListener(new java.awt.event.ActionListener() {
@@ -133,6 +148,11 @@ public class Calculadora extends javax.swing.JFrame {
         jBotaoSomar.setText("+");
 
         jBotao0.setText("0");
+        jBotao0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBotao0ActionPerformed(evt);
+            }
+        });
 
         jBotaoIgual.setText("=");
 
@@ -244,6 +264,10 @@ public class Calculadora extends javax.swing.JFrame {
 
     private void jBotao6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotao6ActionPerformed
         // TODO add your handling code here:
+          if(jVisor.getText().equals("0")){
+           jVisor.setText("");
+       }
+        jVisor.setText(jVisor.getText()+"6");
     }//GEN-LAST:event_jBotao6ActionPerformed
 
     private void jBotao7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotao7ActionPerformed
@@ -253,6 +277,35 @@ public class Calculadora extends javax.swing.JFrame {
        }
         jVisor.setText(jVisor.getText()+"7");
     }//GEN-LAST:event_jBotao7ActionPerformed
+    private void jBotao4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotao4ActionPerformed
+        // TODO add your handling code here:
+          if(jVisor.getText().equals("0")){
+           jVisor.setText("");
+       }
+        jVisor.setText(jVisor.getText()+"4");
+    }//GEN-LAST:event_jBotao4ActionPerformed
+
+    private void jBotao0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotao0ActionPerformed
+        // TODO add your handling code here:
+          
+        jVisor.setText(jVisor.getText()+"0");
+    }//GEN-LAST:event_jBotao0ActionPerformed
+
+    private void jBotao2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotao2ActionPerformed
+        // TODO add your handling code here:
+          if(jVisor.getText().equals("0")){
+           jVisor.setText("");
+       }
+        jVisor.setText(jVisor.getText()+"2");
+    }//GEN-LAST:event_jBotao2ActionPerformed
+
+    private void jBotao8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotao8ActionPerformed
+        // TODO add your handling code here:
+          if(jVisor.getText().equals("0")){
+           jVisor.setText("");
+       }
+        jVisor.setText(jVisor.getText()+"8");
+    }//GEN-LAST:event_jBotao8ActionPerformed
 
     private void jBotao1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotao1ActionPerformed
         // TODO add your handling code here:
@@ -285,6 +338,7 @@ public class Calculadora extends javax.swing.JFrame {
        }
         jVisor.setText(jVisor.getText()+"9");
     }//GEN-LAST:event_jBotao9ActionPerformed
+
 
     /**
      * @param args the command line arguments
