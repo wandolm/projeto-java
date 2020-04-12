@@ -198,6 +198,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="4"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBotao4ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jBotao1">
           <Properties>
@@ -208,6 +211,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="8"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBotao8ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jBotao5">
           <Properties>
@@ -218,6 +224,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="2"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBotao2ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jBotao9">
           <Properties>
@@ -261,6 +270,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="0"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBotao0ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jBotaoIgual">
           <Properties>
