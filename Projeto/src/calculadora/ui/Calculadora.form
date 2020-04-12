@@ -101,39 +101,32 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jBotaoIgual" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jBotaoC" min="-2" pref="41" max="-2" attributes="0"/>
-                              <Component id="jBotao7" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
-                              <Component id="jBotao4" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
-                              <Component id="jBotao1" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="jBotao1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jBotao4" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jBotao7" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jBotaoC" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jBotao5" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jBotao2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jBotao8" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="jBotao6" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jBotao3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jBotao9" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jBotao0" min="-2" pref="40" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" max="-2" attributes="0"/>
-                                  <Component id="jBotaoPonto" min="-2" pref="38" max="-2" attributes="0"/>
-                              </Group>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="jBotao2" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jBotao5" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jBotao8" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jBotao0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="jBotao3" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jBotao6" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jBotao9" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jBotaoPonto" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jBotaoSomar" pref="43" max="32767" attributes="0"/>
-                              <Component id="jBotaoSubtrair" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jBotaoMultiplicar" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jBotaoSubtrair" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jBotaoSomar" alignment="1" max="32767" attributes="0"/>
                               <Component id="jBotaoDividir" max="32767" attributes="0"/>
-                              <Component id="jBotaoMultiplicar" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -151,7 +144,7 @@
                           <Component id="jBotao8" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jBotao9" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jBotaoDividir" min="-2" pref="23" max="-2" attributes="0"/>
+                      <Component id="jBotaoDividir" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -160,7 +153,7 @@
                           <Component id="jBotao5" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jBotao6" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jBotaoMultiplicar" min="-2" pref="23" max="-2" attributes="0"/>
+                      <Component id="jBotaoMultiplicar" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -169,17 +162,17 @@
                           <Component id="jBotao2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jBotao3" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jBotaoSubtrair" min="-2" pref="23" max="-2" attributes="0"/>
+                      <Component id="jBotaoSubtrair" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jBotaoSomar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jBotaoSomar" alignment="3" max="32767" attributes="0"/>
                       <Component id="jBotao0" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jBotaoC" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jBotaoPonto" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-                  <Component id="jBotaoIgual" max="32767" attributes="0"/>
+                  <Component id="jBotaoIgual" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -262,11 +255,17 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="/"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBotaoDividirActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jBotaoMultiplicar">
           <Properties>
             <Property name="text" type="java.lang.String" value="*"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBotaoMultiplicarActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jBotaoSubtrair">
           <Properties>
@@ -290,6 +289,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="="/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBotaoIgualActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jBotaoC">
           <Properties>

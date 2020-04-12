@@ -10,6 +10,9 @@ package calculadora.ui;
  * @author wando
  */
 public class Calculadora extends javax.swing.JFrame {
+    
+    private float resultado = 0;
+    private boolean operacao = false;    
 
     /**
      * Creates new form Calculadora
@@ -140,8 +143,18 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jBotaoDividir.setText("/");
+        jBotaoDividir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBotaoDividirActionPerformed(evt);
+            }
+        });
 
         jBotaoMultiplicar.setText("*");
+        jBotaoMultiplicar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBotaoMultiplicarActionPerformed(evt);
+            }
+        });
 
         jBotaoSubtrair.setText("-");
 
@@ -155,6 +168,11 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jBotaoIgual.setText("=");
+        jBotaoIgual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBotaoIgualActionPerformed(evt);
+            }
+        });
 
         jBotaoC.setText("C");
         jBotaoC.addActionListener(new java.awt.event.ActionListener() {
@@ -174,33 +192,29 @@ public class Calculadora extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jBotaoIgual, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jBotaoC, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBotao7, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBotao4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBotao1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jBotao1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jBotao4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jBotao7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jBotaoC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jBotao5)
-                                    .addComponent(jBotao2)
-                                    .addComponent(jBotao8))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jBotao6, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jBotao3, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jBotao9)))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(jBotao0, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jBotaoPonto, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jBotao2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jBotao5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jBotao8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jBotao0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jBotao3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jBotao6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jBotao9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jBotaoPonto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(10, 10, 10)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jBotaoSomar, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
-                            .addComponent(jBotaoSubtrair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jBotaoDividir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jBotaoMultiplicar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(jBotaoMultiplicar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jBotaoSubtrair, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jBotaoSomar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jBotaoDividir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -212,29 +226,29 @@ public class Calculadora extends javax.swing.JFrame {
                         .addComponent(jBotao7)
                         .addComponent(jBotao8)
                         .addComponent(jBotao9))
-                    .addComponent(jBotaoDividir, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jBotaoDividir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jBotao4)
                         .addComponent(jBotao5)
                         .addComponent(jBotao6))
-                    .addComponent(jBotaoMultiplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jBotaoMultiplicar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jBotao1)
                         .addComponent(jBotao2)
                         .addComponent(jBotao3))
-                    .addComponent(jBotaoSubtrair, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jBotaoSubtrair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBotaoSomar)
+                    .addComponent(jBotaoSomar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jBotao0)
                     .addComponent(jBotaoC)
                     .addComponent(jBotaoPonto))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jBotaoIgual, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jBotaoIgual)
                 .addContainerGap())
         );
 
@@ -269,85 +283,137 @@ public class Calculadora extends javax.swing.JFrame {
 
     private void jBotao6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotao6ActionPerformed
         // TODO add your handling code here:
-          if(jVisor.getText().equals("0")){
+        if(jVisor.getText().equals("0") || operacao == true){
            jVisor.setText("");
-       }
+        }
         jVisor.setText(jVisor.getText()+"6");
+        operacao = false;
     }//GEN-LAST:event_jBotao6ActionPerformed
 
     private void jBotao7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotao7ActionPerformed
         // TODO add your handling code here:
-       if(jVisor.getText().equals("0")){
+       if(jVisor.getText().equals("0") || operacao == true){
            jVisor.setText("");
        }
         jVisor.setText(jVisor.getText()+"7");
+        operacao = false;
     }//GEN-LAST:event_jBotao7ActionPerformed
     private void jBotao4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotao4ActionPerformed
         // TODO add your handling code here:
-          if(jVisor.getText().equals("0")){
+          if(jVisor.getText().equals("0") || operacao == true){
            jVisor.setText("");
        }
         jVisor.setText(jVisor.getText()+"4");
+        operacao = false;
     }//GEN-LAST:event_jBotao4ActionPerformed
 
     private void jBotao0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotao0ActionPerformed
         // TODO add your handling code here:
-          
+        
+        if(jVisor.getText().equals("0") || operacao == true){
+           jVisor.setText("");
+        }
+        
         jVisor.setText(jVisor.getText()+"0");
+        operacao = false;
     }//GEN-LAST:event_jBotao0ActionPerformed
 
     private void jBotao2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotao2ActionPerformed
         // TODO add your handling code here:
-          if(jVisor.getText().equals("0")){
+          if(jVisor.getText().equals("0") || operacao == true){
            jVisor.setText("");
        }
         jVisor.setText(jVisor.getText()+"2");
+        operacao = false;
     }//GEN-LAST:event_jBotao2ActionPerformed
 
     private void jBotao8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotao8ActionPerformed
         // TODO add your handling code here:
-          if(jVisor.getText().equals("0")){
+          if(jVisor.getText().equals("0") || operacao == true){
            jVisor.setText("");
        }
         jVisor.setText(jVisor.getText()+"8");
+        operacao = false;
     }//GEN-LAST:event_jBotao8ActionPerformed
 
     private void jBotao1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotao1ActionPerformed
         // TODO add your handling code here:
-        if(jVisor.getText().equals("0")){
+        if(jVisor.getText().equals("0") || operacao == true){
            jVisor.setText("");
        }
         jVisor.setText(jVisor.getText()+"1");
+        operacao = false;
     }//GEN-LAST:event_jBotao1ActionPerformed
 
     private void jBotao3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotao3ActionPerformed
         // TODO add your handling code here:
-        if(jVisor.getText().equals("0")){
+        if(jVisor.getText().equals("0") || operacao == true){
            jVisor.setText("");
        }
         jVisor.setText(jVisor.getText()+"3");
+        operacao = false;
     }//GEN-LAST:event_jBotao3ActionPerformed
 
     private void jBotao5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotao5ActionPerformed
         // TODO add your handling code here:
-        if(jVisor.getText().equals("0")){
+        if(jVisor.getText().equals("0") || operacao == true){
            jVisor.setText("");
        }
         jVisor.setText(jVisor.getText()+"5");
+        operacao = false;
     }//GEN-LAST:event_jBotao5ActionPerformed
 
     private void jBotao9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotao9ActionPerformed
         // TODO add your handling code here:
-        if(jVisor.getText().equals("0")){
+        if(jVisor.getText().equals("0") || operacao == true){
            jVisor.setText("");
        }
         jVisor.setText(jVisor.getText()+"9");
+        operacao = false;
     }//GEN-LAST:event_jBotao9ActionPerformed
 
     private void jBotaoCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotaoCActionPerformed
         // TODO add your handling code here:
         jVisor.setText("0");
+        resultado = 0;
     }//GEN-LAST:event_jBotaoCActionPerformed
+
+    private void jBotaoMultiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotaoMultiplicarActionPerformed
+        // TODO add your handling code here:
+        operacao = true;
+        
+        if(resultado == 0){
+            resultado = 1;
+        }
+        
+        resultado = resultado * Float.parseFloat(jVisor.getText());
+        
+        jVisor.setText(String.valueOf(resultado));
+    }//GEN-LAST:event_jBotaoMultiplicarActionPerformed
+
+    private void jBotaoIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotaoIgualActionPerformed
+        // TODO add your handling code here:
+       // jVisor.setText(String.valueOf(numAnterior));
+    }//GEN-LAST:event_jBotaoIgualActionPerformed
+
+    private void jBotaoDividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBotaoDividirActionPerformed
+        // TODO add your handling code here:
+        operacao = true;
+        
+        try{
+            if(resultado == 0){
+                resultado = Float.parseFloat(jVisor.getText());
+                jVisor.setText(String.valueOf(resultado));
+            }
+            else{
+               resultado = resultado /  Float.parseFloat(jVisor.getText());
+               jVisor.setText(String.valueOf(resultado)); 
+            }
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_jBotaoDividirActionPerformed
 
 
     /**
